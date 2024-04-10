@@ -23,6 +23,6 @@ def export_data(data, *args, **kwargs):
     pq.write_to_dataset(
         table,
         root_path=root_path,
-        partition_cols=['transaction_date'],
+        partition_cols=['transaction_year'],
         filesystem=gcs
     )

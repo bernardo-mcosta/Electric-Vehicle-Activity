@@ -54,7 +54,7 @@ def load_from_google_cloud_storage(*args, **kwargs):
     
     gcs = pa.fs.GcsFileSystem()
 
-    dataset = pq.ParquetDataset(root_path, filesystem=gcs,schema=schema)
+    dataset = pq.ParquetDataset(root_path, filesystem=gcs, schema = schema)
 
     data = dataset.read_pandas().to_pandas()
 

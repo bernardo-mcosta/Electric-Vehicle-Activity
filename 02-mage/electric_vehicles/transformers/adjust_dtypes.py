@@ -4,6 +4,7 @@ if 'test' not in globals():
     from mage_ai.data_preparation.decorators import test
 
 import pandas as pd
+import numpy as np
 
 @transformer
 def transform(data, *args, **kwargs):
@@ -39,10 +40,19 @@ def transform(data, *args, **kwargs):
     }   
 
     for column, dtype in schema.items():
+        if pd.api.types.is_string_dtype(data[column]):
+            print(f'string detected for [{column}], skipping...')
+            continue
         try:
-            data[column] = data[column].astype(dtype)
-        except ValueError as e:
+            if column == "sale_price" and data[column].dtype == "float64":
+                data[column] = data[column].round().astype(pd.Int64Dtype())
+                print(f'[{column}] converted from {data[column].dtype} to type {dtype}...')
+            else:
+                data[column] = data[column].astype(dtype)
+                print(f'[{column}] converted from {data[column].dtype} to type {dtype}...')
+        except (ValueError, TypeError) as e:
             print(f"Warning: Failed to convert column '{column}' to type '{dtype}'. Error: {e}")
 
-    print(data.info())
+    print('\n')
+    data.info()
     return data
