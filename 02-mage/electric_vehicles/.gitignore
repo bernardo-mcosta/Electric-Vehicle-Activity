@@ -12,5 +12,5 @@ logs/
 mage-ai.db
 mage_data/
 secrets/
-metadata.yaml
-dbt*
+#metadata.yaml
+#dbt*

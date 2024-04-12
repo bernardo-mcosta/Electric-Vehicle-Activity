@@ -175,5 +175,5 @@ scratch*
 *.parquet
 **/*.json
 **/io_config.yaml
-**/metadata.yaml
-**/__init__.py
+#**/metadata.yaml
+#**/__init__.py
