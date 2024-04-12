@@ -14,6 +14,19 @@ table_name = 'electric_vehicles'
 root_path = f'{bucket_name}/{table_name}'
 
 @data_exporter
+# def export_data(data, *args, **kwargs):
+
+#     table = pa.Table.from_pandas(data)
+
+#     gcs = pa.fs.GcsFileSystem()
+
+#     pq.write_to_dataset(
+#         table,
+#         root_path=root_path,
+#         partition_cols=['transaction_year'],
+#         filesystem=gcs
+#     )
+
 def export_data(data, *args, **kwargs):
 
     table = pa.Table.from_pandas(data)

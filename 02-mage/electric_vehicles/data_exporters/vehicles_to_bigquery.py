@@ -8,8 +8,6 @@ if 'data_exporter' not in globals():
     from mage_ai.data_preparation.decorators import data_exporter
 
 from google.cloud.bigquery import SchemaField
-import pandas as pd
-
 
 @data_exporter
 def export_data_to_big_query(df: DataFrame, **kwargs) -> None:
