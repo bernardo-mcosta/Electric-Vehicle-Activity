@@ -3,7 +3,7 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - vehicles_to_bigquery
+  - small_morning
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -30,14 +30,14 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: sql
-  name: vehicles_to_bigquery
+  name: small morning
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
-  type: data_loader
+  type: data_exporter
   upstream_blocks:
   - load_vehicles_gcs
-  uuid: vehicles_to_bigquery
+  uuid: small_morning
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -59,7 +59,7 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-04-12 19:02:32'
+updated_at: '2024-04-12 19:08:59'
 uuid: gcs_to_bigquery
 variables_dir: /home/src/mage_data/electric_vehicles
 widgets: []
