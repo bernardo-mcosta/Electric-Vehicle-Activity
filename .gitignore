@@ -1,5 +1,4 @@
-*.json
-**/credentials
+**.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -170,9 +169,11 @@ node_modules
 
 # Scratch files
 scratch*
-/mage_data*
+*/mage_data
+*/credentials
 *secrets*.json
-your-first-project
-
+*.parquet
 **/*.json
-
+**/io_config.yaml
+**/metadata.yaml
+**/__init__.py

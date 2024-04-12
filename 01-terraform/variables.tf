@@ -4,7 +4,7 @@ locals {
 
 variable "project" {
   description = "Your GCP Project ID"
-  # default = "Your GCP Project ID"
+  default     = "dtc-de-course-412223"
 }
 
 variable "region" {
@@ -21,5 +21,5 @@ variable "storage_class" {
 variable "BQ_DATASET" {
   description = "BigQuery Dataset that raw data (from GCS) will be written to"
   type        = string
-  default     = "electric-vehicles"
+  default     = "electric_vehicles"
 }
