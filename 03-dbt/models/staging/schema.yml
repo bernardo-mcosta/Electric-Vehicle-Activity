@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    database: dtc-de-course-412223
+    schema: electric_vehicles
+
+    tables:
+      - name: electric_vehicles_data
