@@ -53,12 +53,15 @@ Two pipelines were created using Python and SQL and they were orchestrated by Ma
 
 
 1) The first one is called `api_to_gcp` and it extracts data from the Washington open data portal API, which is stored as .json, and loads it into a Google Cloud Storage bucket as partitioned .parquet files.
+
 ![pipeline 1](/assets/api_to_gcs.png)
 
-1) The second pipeline is called `gcp_to_bigquery` and it reads data from the bucket and loads it into Bigquery as a partitioned external table. 
+2) The second pipeline is called `gcp_to_bigquery` and it reads data from the bucket and loads it into Bigquery as a partitioned external table. 
+
 ![pipeline 2](/assets/gcs_to_bigquery.png)
 
 dbt is then used, pulling the source data stored in Bigquery to perform data transformations, such as casting data types and creating fact and dimension tables with SQL.
+
 ![pipeline 2](/assets/lineage.png)
 
 Finally, Looker Studio imports the fact table created directly from Bigquery, and then the dashboard is created. 
