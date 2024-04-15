@@ -20,7 +20,7 @@ Additionally, this project was also part of the [DataTalksClub's Engineering Zoo
 
 ## Data source 
 
-The project utilizes data provided by the Washington State Department of Licensing at its  [official open data portal](https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2), specifically addressing electric vehicle title and registration activity.
+The project utilizes data provided by the Washington State Department of Licensing at its  [official open data portal](https://data.wa.gov/Transportation/Electric-Vehicle-Title-and-Registration-Activity/rpr4-cgyd/about_data), specifically addressing electric vehicle title and registration activity.
 
 The dataset contains 948k rows and 29 columns with data ranging from 2010 to 2024 (current date). Each rows is a transaction and the columns encompass information about the vehicle, transaction, fees and owner location. 
 
