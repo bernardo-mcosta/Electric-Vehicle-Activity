@@ -38,7 +38,7 @@ default:
   DUCKDB_SCHEMA: main
   # Google
   GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/credentials/keys.json"
-  GOOGLE_LOCATION: southamerica-east1 # Optional
+  GOOGLE_LOCATION: southamerica-east1
   # MongoDB
   # Specify either the connection string or the (host, password, user, port) to connect to MongoDB.
   MONGODB_CONNECTION_STRING: "mongodb://{username}:{password}@{host}:{port}/"
@@ -94,29 +94,29 @@ default:
   SNOWFLAKE_USER: username
   SNOWFLAKE_PASSWORD: password
   SNOWFLAKE_ACCOUNT: account_id.region
-  SNOWFLAKE_DEFAULT_WH: null                  # Optional default warehouse
-  SNOWFLAKE_DEFAULT_DB: null                  # Optional default database
-  SNOWFLAKE_DEFAULT_SCHEMA: null              # Optional default schema
-  SNOWFLAKE_PRIVATE_KEY_PASSPHRASE: null      # Optional private key passphrase
-  SNOWFLAKE_PRIVATE_KEY_PATH: null            # Optional private key path
-  SNOWFLAKE_ROLE: null                        # Optional role name
-  SNOWFLAKE_TIMEOUT: null                     # Optional timeout in seconds
+  SNOWFLAKE_DEFAULT_WH: null # Optional default warehouse
+  SNOWFLAKE_DEFAULT_DB: null # Optional default database
+  SNOWFLAKE_DEFAULT_SCHEMA: null # Optional default schema
+  SNOWFLAKE_PRIVATE_KEY_PASSPHRASE: null # Optional private key passphrase
+  SNOWFLAKE_PRIVATE_KEY_PATH: null # Optional private key path
+  SNOWFLAKE_ROLE: null # Optional role name
+  SNOWFLAKE_TIMEOUT: null # Optional timeout in seconds
   # Trino
   trino:
-    catalog: postgresql                       # Change this to the catalog of your choice
+    catalog: postgresql # Change this to the catalog of your choice
     host: 127.0.0.1
     http_headers:
-      X-Something: 'mage=power'
+      X-Something: "mage=power"
     http_scheme: http
-    password: mage1337                        # Optional
+    password: mage1337 # Optional
     port: 8080
     schema: core_data
-    session_properties:                       # Optional
+    session_properties: # Optional
       acc01.optimize_locality_enabled: false
       optimize_hash_generation: true
-    source: trino-cli                         # Optional
+    source: trino-cli # Optional
     user: admin
-    verify: /path/to/your/ca.crt              # Optional
+    verify: /path/to/your/ca.crt # Optional
   # Weaviate
   WEAVIATE_ENDPOINT: https://some-endpoint.weaviate.network
   WEAVIATE_INSTANCE_API_KEY: YOUR-WEAVIATE-API-KEY
